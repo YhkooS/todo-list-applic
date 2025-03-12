@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "cd todo-api && npm run start", 
-    "heroku-postbuild": "cd todoclient && npm install && npm run build", 
+    "start": "cd todo-api && npm start",
+    "heroku-postbuild": "cd todo-client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn src/index.ts"
   },
@@ -26,7 +26,7 @@
   "license": "ISC",
   "description": "",
   "engines": {
-    "node": "18.x", 
-    "npm": "9.x" 
+    "node": "18.x",
+    "npm": "9.x"
   }
 }
