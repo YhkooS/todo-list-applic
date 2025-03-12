@@ -1,0 +1,207 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+ul {
+  list-style-type: none; /* Noktaları kaldırır */
+  padding: 0; /* Varsayılan padding'i sıfırlar */
+  margin: 0; /* Varsayılan margin'i sıfırlar */
+  text-align: left;
+  margin-top: 20px;
+}
+
+li{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Metin sola, butonlar sağa gider */
+  padding: 10px;
+  
+  width: 600px;  
+  box-sizing: border-box; 
+
+  padding: 0; /* Liste elemanlarının varsayılan padding'ini sıfırlar */
+  margin: 10px 0; /* Elemanlar arasında biraz boşluk bırakır */
+  margin-top: 12px;
+  
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh; /* Sayfanın tamamını kaplasın */
+  margin: 0;
+  
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  padding: 20px 0;
+}
+
+input[type="text"] {
+  flex: 1;
+  max-width: 400px; /* Giriş alanını sınırlı tut */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-size: 17px;
+}
+
+#editInput {
+  padding: 10px;
+  width: 150px;
+
+}
+
+#list {
+  text-align: left;
+  width: 1000px;
+  max-width: 300px; /* Todo öğesinin genişliğini sınırlar */
+  word-wrap: break-word; /* Uzun kelimeleri kırarak alt satıra geçirir */
+  overflow-wrap: break-word; /* Uzun kelimeleri satır içine sığdırır */
+  white-space: normal; /* Metnin satır içinde normal şekilde akmasını sağlar */
+  margin-right: 200px;
+  
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px; 
+  border: 2px solid #646cff;
+  border-radius: 5px;
+  appearance: none; /* Varsayılan stilini kaldırır */
+  cursor: pointer;
+  display: inline-block;
+  background-color: white;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 5px;
+  
+}
+
+input[type="checkbox"]:checked {
+  
+  background-color: #646cff;
+  border-color: #646cff;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+input[type="checkbox"]:checked::before {
+  display: block;
+}
+
+#todo {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+h1 {
+  margin-right: 30px;
+  font-size: 65px
+}
+
+.todo-text {
+  flex-grow: 1;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  min-width: 400px;
+
+  font-size: 19px; /* Todo yazı font büyüklüğü */
+  font-weight: bold; /* İsteğe bağlı kalınlık */
+  color: white; /* İsteğe bağlı renk değişimi */
+}
+
+input[type="checkbox"]:checked + .todo-text {
+  text-decoration: line-through; /* Üzeri çizili yap */
+  text-decoration-thickness: 2px; /* kalınlığını arttır */
+  color: #888; /* soluk yap */
+}
+
+button {
+  flex-shrink: 0; /* Butonların boyutu sabit kalır ve küçülmez */
+  margin-left: 10px;
+}
+
+#edit {
+  flex-shrink: 0; /* Butonların boyutu sabit kalır ve küçülmez */
+  margin-left: 250px;
+}
+
+.todo-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 2fr) auto; /* Orta sütun min-width 0 ile */
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+ 
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;  
+  box-sizing: border-box; 
+}
+
+.todo-buttons {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+  margin-left: 160px;
+}

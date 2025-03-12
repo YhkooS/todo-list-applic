@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "CommonJS",
+      "outDir": "dist",
+      "rootDir": ".", // Kök dizinden derleme yap
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["*.ts"], // Direkt dizindeki .ts dosyalarını derle
+    "exclude": ["node_modules", "../todo-client"]
+  }
