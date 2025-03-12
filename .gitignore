@@ -1,0 +1,21 @@
+# Node.js ve npm dosyaları
+node_modules/
+npm-debug.log
+
+# Build ve derleme dosyaları
+build/
+dist/
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+
+# IDE ve editör dosyaları
+.vscode/
+.idea/
+
+# Çevre değişkenleri
+.env
+
+# Diğer geçici dosyalar
+*.log
