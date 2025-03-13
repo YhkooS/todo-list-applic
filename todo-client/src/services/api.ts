@@ -1,4 +1,4 @@
-const API_URL = "https://todo-list-applic-863a16acb8d1.herokuapp.com"
+const API_URL = "https://todo-list-applic-863a16acb8d1.herokuapp.com/api/todos"; 
 
 export interface Todo {
     id: number;
