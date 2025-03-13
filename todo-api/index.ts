@@ -5,7 +5,7 @@ import todoRoutes from './router/todoRoutes';
 import sequelize from './config/database';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
