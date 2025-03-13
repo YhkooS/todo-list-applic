@@ -1,28 +1,28 @@
-// config/database.ts
 import { Sequelize } from 'sequelize';
 
 const databaseUrl = process.env.DATABASE_URL || 'postgres://postgres:3200@localhost:5432/postgres';
 
-// Yerel test için şifreyi buraya girin (örneğin, 'your_local_password')
+console.log("🔗 DATABASE_URL:", databaseUrl); // Bağlantıyı debug etmek için ekledik
+
 const sequelize = new Sequelize(databaseUrl, {
   dialect: 'postgres',
   dialectOptions: {
     ssl: process.env.NODE_ENV === 'production' ? {
       require: true,
-      rejectUnauthorized: false // Heroku için SSL sertifikası doğrulamasını devre dışı bırakır
+      rejectUnauthorized: false 
     } : false
   },
-  logging: process.env.NODE_ENV === 'development' // Geliştirme ortamında logları aç, production'da kapat
+  logging: console.log // SQL sorgularını görmek için
 });
 
-export default sequelize;
-
-// Bağlantıyı test etmek için (isteğe bağlı)
+// Bağlantıyı test et
 (async () => {
   try {
     await sequelize.authenticate();
-    console.log('Veritabanı bağlantısı başarılı');
+    console.log('Veritabanına başarıyla bağlandı');
   } catch (error) {
     console.error('Veritabanı bağlantı hatası:', error);
   }
 })();
+
+export default sequelize;

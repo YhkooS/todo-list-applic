@@ -11,8 +11,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 
 // Frontend'in build klasörünü serve et
-const frontendPath = path.join(__dirname, '../../todo-client/assets/dist');
+const frontendPath = path.join(__dirname, '../../todo-client/dist');
 console.log('Frontend path:', frontendPath); // Debug için frontend dosya yolu
+
 
 app.use(express.static(frontendPath));
 
