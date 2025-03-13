@@ -6,6 +6,10 @@ npm-debug.log
 build/
 dist/
 
+# Derlenmiş JavaScript dosyaları
+*.js
+*.js.map
+
 # İşletim sistemi dosyaları
 .DS_Store
 Thumbs.db
