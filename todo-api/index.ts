@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 
 // Frontend'in build klasörünü serve et
-const frontendPath = path.join(__dirname, '../todo-client/dist');
+const frontendPath = path.join(__dirname, '../../todo-client/assets/dist');
 console.log('Frontend path:', frontendPath); // Debug için frontend dosya yolu
 
 app.use(express.static(frontendPath));
@@ -22,7 +22,7 @@ app.use('/api/todos', todoRoutes);
 
 // React Router için frontend'in index.html dosyasına yönlendirme
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../todo-client/dist', 'index.html'));
+  res.sendFile(path.join(frontendPath, 'index.html'));
 });
 
 // Veritabanına bağlan ve tabloyu oluştur
