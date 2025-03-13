@@ -31,7 +31,7 @@ export const createTodo = async (todo: { title: string; completed: boolean }): P
 
 export const updateTodo = async (id: string, todo: { title: string; completed: boolean }): Promise<Todo> => {
     const response = await fetch(`${API_URL}/${id}`, {
-      method: 'POST', // Backend'de rota POST olarak tanımlı
+      method: 'POST', 
       headers: {
         'Content-Type': 'application/json',
       },
@@ -50,5 +50,5 @@ export const deleteTodo = async (id: string): Promise<void> => {
     if (!response.ok) {
       throw new Error(`Todo silinirken hata: ${response.status} - ${response.statusText}`);
     }
-    // DELETE genellikle yanıt gövdesi döndürmez, bu yüzden sadece hata kontrolü yapıyoruz
+    
   };

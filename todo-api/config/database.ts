@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize';
 
 const databaseUrl = process.env.DATABASE_URL || 'postgres://postgres:3200@localhost:5432/postgres';
 
-console.log("🔗 DATABASE_URL:", databaseUrl); // Bağlantıyı debug etmek için ekledik
+console.log("DATABASE_URL:", databaseUrl); // debug
 
 const sequelize = new Sequelize(databaseUrl, {
   dialect: 'postgres',
@@ -12,7 +12,7 @@ const sequelize = new Sequelize(databaseUrl, {
       rejectUnauthorized: false 
     } : false
   },
-  logging: console.log // SQL sorgularını görmek için
+  logging: console.log // SQL sorgularını 
 });
 
 // Bağlantıyı test et

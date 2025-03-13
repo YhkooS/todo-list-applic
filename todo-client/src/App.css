@@ -42,9 +42,9 @@
 }
 
 ul {
-  list-style-type: none; /* Noktaları kaldırır */
-  padding: 0; /* Varsayılan padding'i sıfırlar */
-  margin: 0; /* Varsayılan margin'i sıfırlar */
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
   text-align: left;
   margin-top: 20px;
 }
@@ -53,14 +53,14 @@ li{
  
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Metin sola, butonlar sağa gider */
+  justify-content: space-between; 
   padding: 10px;
   
   width: 600px;  
   box-sizing: border-box; 
 
-  padding: 0; /* Liste elemanlarının varsayılan padding'ini sıfırlar */
-  margin: 10px 0; /* Elemanlar arasında biraz boşluk bırakır */
+  padding: 0; 
+  margin: 10px 0; 
   margin-top: 12px;
   
   
@@ -71,7 +71,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100vh; /* Sayfanın tamamını kaplasın */
+  height: 100vh; 
   margin: 0;
   
 }
@@ -116,7 +116,7 @@ input[type="checkbox"] {
   height: 25px; 
   border: 2px solid #646cff;
   border-radius: 5px;
-  appearance: none; /* Varsayılan stilini kaldırır */
+  appearance: none; 
   cursor: pointer;
   display: inline-block;
   background-color: white;
@@ -165,30 +165,30 @@ h1 {
   white-space: normal;
   min-width: 400px;
 
-  font-size: 19px; /* Todo yazı font büyüklüğü */
-  font-weight: bold; /* İsteğe bağlı kalınlık */
-  color: white; /* İsteğe bağlı renk değişimi */
+  font-size: 19px; 
+  font-weight: bold; 
+  color: white; 
 }
 
 input[type="checkbox"]:checked + .todo-text {
-  text-decoration: line-through; /* Üzeri çizili yap */
-  text-decoration-thickness: 2px; /* kalınlığını arttır */
-  color: #888; /* soluk yap */
+  text-decoration: line-through; 
+  text-decoration-thickness: 2px; 
+  color: #888; 
 }
 
 button {
-  flex-shrink: 0; /* Butonların boyutu sabit kalır ve küçülmez */
+  flex-shrink: 0; 
   margin-left: 10px;
 }
 
 #edit {
-  flex-shrink: 0; /* Butonların boyutu sabit kalır ve küçülmez */
+  flex-shrink: 0; 
   margin-left: 250px;
 }
 
 .todo-item {
   display: grid;
-  grid-template-columns: auto minmax(0, 2fr) auto; /* Orta sütun min-width 0 ile */
+  grid-template-columns: auto minmax(0, 2fr) auto; 
   gap: 10px;
   align-items: center;
   padding: 10px;

@@ -1,33 +1,33 @@
 import { DataTypes, Model } from "sequelize";
-import sequelize from "../config/database"; // Veritabanı bağlantısını içe aktarıyoruz
+import sequelize from "../config/database"; 
 
-// Todo modelini oluşturuyoruz
+
 class Todo extends Model {
     public id!: number;
     public title!: string;
     public completed!: boolean;
 }
 
-// Modelin veritabanındaki yapısını tanımlıyoruz
+// Modelin veritabanındaki yapısını 
 Todo.init(
     {
         id: {
-            type: DataTypes.INTEGER, // Sayısal ID olacak
-            autoIncrement: true, // ID otomatik artacak
-            primaryKey: true, // ID birincil anahtar olacak
+            type: DataTypes.INTEGER, 
+            autoIncrement: true, 
+            primaryKey: true, 
         },
         title: {
-            type: DataTypes.STRING, // Metin türünde bir başlık
-            allowNull: false, // Boş bırakılamaz
+            type: DataTypes.STRING, 
+            allowNull: false, 
         },
         completed: {
-            type: DataTypes.BOOLEAN, // Boolean (true/false) olacak
-            defaultValue: false, // Varsayılan olarak tamamlanmamış olacak
+            type: DataTypes.BOOLEAN, 
+            defaultValue: false, 
         },
     },
     {
-        sequelize, // Veritabanı bağlantısını belirtiyoruz
-        tableName: "todos", // Veritabanında "todos" adında bir tablo oluşturulacak
+        sequelize, 
+        tableName: "todos", 
     }
 );
 

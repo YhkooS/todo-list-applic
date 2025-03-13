@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import Todo from '../models/Todo'; // Modeli import ediyoruz
+import Todo from '../models/Todo'; 
 import { getTodos, createTodo, deleteTodo, updateTodo } from "../controllers/todoController";
 
 
@@ -19,4 +19,4 @@ router.post("/:todoId", updateTodo);
 
 
 
-export default router;  // Router'ı dışa aktarıyoruz
+export default router;  

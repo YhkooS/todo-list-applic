@@ -8,13 +8,13 @@ dotenv.config();
 const app = express();
 
 app.use(cors());
-app.use(express.json());  // JSON verilerini işleyebilmek için
+app.use(express.json());  
 
-app.use('/api/todos', todoRoutes);  // Todo rotalarını kullan
+app.use('/api/todos', todoRoutes);  
 
 const PORT = process.env.PORT || 3000;
 
-sequelize.sync()  // Veritabanı ile senkronize et
+sequelize.sync()  
   .then(() => {
     console.log(' Database synchronized');
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
