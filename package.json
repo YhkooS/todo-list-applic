@@ -5,6 +5,7 @@
   "scripts": {
     "start": "cd todo-api && npm start",
     "heroku-postbuild": "cd todo-client && npm install && npm run build",
+    "heroku-prebuild": "cd todo-api && npm install && npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn src/index.ts"
   },

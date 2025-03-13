@@ -23,3 +23,6 @@ Thumbs.db
 
 # Diğer geçici dosyalar
 *.log
+
+
+todo-api/dist
