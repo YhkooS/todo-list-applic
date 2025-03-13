@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/todos"
+const API_URL = "https://todo-list-applic-863a16acb8d1.herokuapp.com"
 
 export interface Todo {
     id: number;
