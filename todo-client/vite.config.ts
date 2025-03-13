@@ -3,9 +3,8 @@ import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [react()],
   server: {
-    port: 3000, // Yerel geliştirme için port (isteğe bağlı)
-    open: true, // Tarayıcıyı otomatik aç (isteğe bağlı)
   },
 });

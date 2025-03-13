@@ -1,17 +1,29 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import cors from 'cors'; // CORS importu
+import cors from 'cors';
 import todoRoutes from './router/todoRoutes';
 import sequelize from './config/database';
+import path from 'path';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
+// Frontend'in build klasörünü serve et
+const frontendPath = path.join(__dirname, '../todo-client/dist');
+console.log('Frontend path:', frontendPath); // Debug için frontend dosya yolu
+
+app.use(express.static(frontendPath));
+
 // Middleware
 app.use(bodyParser.json());
 app.use('/api/todos', todoRoutes);
+
+// React Router için frontend'in index.html dosyasına yönlendirme
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../todo-client/dist', 'index.html'));
+});
 
 // Veritabanına bağlan ve tabloyu oluştur
 sequelize.sync()
